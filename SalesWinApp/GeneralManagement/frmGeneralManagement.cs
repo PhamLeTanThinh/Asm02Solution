@@ -16,5 +16,17 @@ namespace SalesWinApp.GeneralManagement
         {
             InitializeComponent();
         }
+
+        private void btnProductManagement_Click(object sender, EventArgs e)
+        {
+            frmProduct ProductsForm = new frmProduct();
+            this.Hide();
+            ProductsForm.ShowDialog();
+        }
+
+        private void btnMemberManagement_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

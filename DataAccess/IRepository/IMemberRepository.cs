@@ -6,7 +6,7 @@ namespace DataAccess.Repository
     {
         public IEnumerable<Member> FilterMemberByString(string name);
         public Member Login(string email, string password);
-        public IEnumerable<Member> GetMemberList();
+        public IEnumerable<Member> GetMember();
         public Member GetMemberByEmail(string email);
         public Member GetMemberById(int id);
         public void AddMember(Member _Member);

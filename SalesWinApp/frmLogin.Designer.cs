@@ -39,49 +39,56 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(454, 98);
+            this.label1.Location = new System.Drawing.Point(265, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 30);
+            this.label1.Size = new System.Drawing.Size(78, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "LOGIN FORM";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(255, 178);
+            this.label2.Location = new System.Drawing.Point(149, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 30);
+            this.label2.Size = new System.Drawing.Size(36, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(255, 250);
+            this.label3.Location = new System.Drawing.Point(149, 125);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 30);
+            this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(404, 175);
+            this.txtEmail.Location = new System.Drawing.Point(236, 88);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(248, 35);
+            this.txtEmail.Size = new System.Drawing.Size(146, 23);
             this.txtEmail.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(404, 250);
+            this.txtPassword.Location = new System.Drawing.Point(236, 125);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(248, 35);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(146, 23);
             this.txtPassword.TabIndex = 4;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(425, 347);
+            this.btnLogin.Location = new System.Drawing.Point(248, 174);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(194, 40);
+            this.btnLogin.Size = new System.Drawing.Size(113, 20);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -89,15 +96,16 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 592);
+            this.ClientSize = new System.Drawing.Size(604, 296);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLogin";
             this.Text = "LoginForm";
             this.ResumeLayout(false);

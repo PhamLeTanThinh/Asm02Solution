@@ -1,7 +1,5 @@
 using DataAccess.Repository;
 using Microsoft.Extensions.Configuration;
-using SalesWinApp.GeneralManagement;
-using SalesWinApp.Personal_Management;
 using SaleWinApp;
 using System;
 

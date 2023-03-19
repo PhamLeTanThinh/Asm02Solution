@@ -27,6 +27,15 @@ namespace SaleWinApp
         }
 
         private void btn_Save_Click(object sender, EventArgs e) {
+            try
+            {
+                int.Parse(mTB_ProductId.Text.ToString());
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
             var _tempProductId = _productRepository.GetProductById(Int32.Parse(mTB_ProductId.Text.ToString()));
             if (    mTB_ProductId.Text.ToString().Equals("")
                 ||  cB_Category.SelectedIndex < 0
@@ -40,10 +49,10 @@ namespace SaleWinApp
             } else {
                 var _tempProduct = new Product();
                 _tempProduct.ProductId = Int32.Parse(mTB_ProductId.Text.ToString());
-                var _tempCategory = (Category)cB_Category.SelectedItem;
-                _tempProduct.CategoryId = _tempCategory.CategoryId;
+                var _tempCategory = (int)cB_Category.SelectedValue;
+                _tempProduct.CategoryId = _tempCategory;
                 _tempProduct.ProductName = tB_ProductName.Text.ToString();
-                if (_tempProduct.CategoryId == 1) {
+                if (_tempCategory == 1) {
                     _tempProduct.Weight = mTB_Weight.Text + "g";
                 } else {
                     _tempProduct.Weight = mTB_Weight.Text + "ml";
@@ -70,9 +79,9 @@ namespace SaleWinApp
         public void AutoLoadDataInto_CB() {
             cB_Category.Items.Clear();
             _categoryList = _categoryRepository.GetCategoryList();
-            foreach (var _category in _categoryList) {
-                cB_Category.Items.Add(_category.CategoryName);
-            }
+            cB_Category.DisplayMember = "CategoryName";
+            cB_Category.ValueMember = "CategoryId";
+            cB_Category.DataSource = _categoryList;
         }
     }
 }

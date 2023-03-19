@@ -1,4 +1,5 @@
 ﻿using BussinessObject.Models;
+using SalesWinApp.Sale_Report;
 using System;
 using System.Windows.Forms;
 
@@ -31,6 +32,12 @@ namespace SaleWinApp
         private void frmGeneralManagement_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmSaleReport frm = new frmSaleReport();
+            frm.Show();
         }
     }
 }

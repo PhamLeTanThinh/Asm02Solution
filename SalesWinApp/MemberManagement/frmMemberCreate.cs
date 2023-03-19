@@ -20,6 +20,17 @@ namespace SaleWinApp
         }
 
         private void btn_Member_Save_Click(object sender, EventArgs e) {
+            int id = 0;
+            try
+            {
+                id = int.Parse(mTB_Member_Id.Text.ToString());
+
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Id in wrong format");
+                return;
+            }
             var _tempMemberEmail = _memberRepository.GetMemberByEmail(tB_Member_Email.Text.ToString());
             var _tempMemberId = _memberRepository.GetMemberById(Int32.Parse(mTB_Member_Id.Text.ToString()));
             if (tB_Member_Email.Text.ToString().Equals("")
